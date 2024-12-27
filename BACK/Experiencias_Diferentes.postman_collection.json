@@ -1,0 +1,812 @@
+{
+	"info": {
+		"_postman_id": "4152bb58-365e-41c1-a9de-37ced682b478",
+		"name": "Experiencias_Diferentes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33879221"
+	},
+	"item": [
+		{
+			"name": "Entries",
+			"item": [
+				{
+					"name": "Crear experiencia",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyMDA4MTQzLCJleHAiOjE3MjI2MTI5NDN9.mVt3GjuYHM8-dNeeTSOY4BTPyTR0JySWP00V0b5w-ps",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Tenis",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "Barcelona",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "lorem ipsum",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Alberto/Downloads/antartic.jpeg"
+								},
+								{
+									"key": "date",
+									"value": "2024-11-30",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "numMinPlaces",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "numTotalPlaces",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "confirmedByAdmin",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3020/experiencias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"experiencias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado experiencias",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/experiencias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"experiencias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Desactivar experiencia",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIxOTIxMTg5LCJleHAiOjE3MjI1MjU5ODl9.xRNCHK7QC6Y_YTM_LmDbYPic_044JqcCSFYoK-C3nCE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"active\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/experiencias/1/experienceState",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"experiencias",
+								"1",
+								"experienceState"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reactivar experiencia",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIxOTIxMTg5LCJleHAiOjE3MjI1MjU5ODl9.xRNCHK7QC6Y_YTM_LmDbYPic_044JqcCSFYoK-C3nCE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/experiencias/1/experienceState",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"experiencias",
+								"1",
+								"experienceState"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirmar experiencia",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIxOTIxMTg5LCJleHAiOjE3MjI1MjU5ODl9.xRNCHK7QC6Y_YTM_LmDbYPic_044JqcCSFYoK-C3nCE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"confirmedByAdmin\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/experiencias/2/experienceState",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"experiencias",
+								"2",
+								"experienceState"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reservar experiencia",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyMDA4MTQzLCJleHAiOjE3MjI2MTI5NDN9.mVt3GjuYHM8-dNeeTSOY4BTPyTR0JySWP00V0b5w-ps",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantityPerPerson\": 5,\r\n    \"state\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/experiencias/24/reservation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"experiencias",
+								"24",
+								"reservation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancelar reserva experiencia",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/experiencias/1/reservation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"experiencias",
+								"1",
+								"reservation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado experiencias reservadas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIxMjM3Mzc3LCJleHAiOjE3MjE4NDIxNzd9.QoRVgAPwfTaW3eDLOGJvWqeDPacYd5rzwK86iBtZroU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3020/experiencias/reservedExperiences",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"experiencias",
+								"reservedExperiences"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Visualizar experiencia especifica por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3020/experiencias/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"experiencias",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar experiencia",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTcyMDYzMTczMSwiZXhwIjoxNzIxMjM2NTMxfQ.eSQrfnxr9XHXbB00nGxHbw19lrx_LvboGjLZ3MrEIi0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location\": \"Valencia2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/experiencias/1/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"experiencias",
+								"1",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Duplicar experiencia",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIxMjM3Mzc3LCJleHAiOjE3MjE4NDIxNzd9.QoRVgAPwfTaW3eDLOGJvWqeDPacYd5rzwK86iBtZroU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3020/experiencias/1/duplicate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"experiencias",
+								"1",
+								"duplicate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscador de experiencias con filtro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3020/experiencias?search=antartic&order=price&direction=DESC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"experiencias"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "antartic"
+								},
+								{
+									"key": "order",
+									"value": "price"
+								},
+								{
+									"key": "direction",
+									"value": "DESC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado de Experiencias del Administrador Reservadas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIzMDIzMjY0LCJleHAiOjE3MjM2MjgwNjR9.tMDNeMpI9RsK7-9BNp-Sk2e8d3u0A5OFVdBi8Y8ysFc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3020/admin/experiences",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"admin",
+								"experiences"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Registrar usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"mncameliaacosta@gmail.com\",\r\n    \"password\": \"12345cD?6\",\r\n    \"username\": \"Noelia_Camelia\",\r\n    \"firstname\": \"Noelia\",\r\n    \"lastname\": \"Camelia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activar usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3020/users/validate/Yd1dneZJLKJZqBU4AsXbMBXps8S6rZ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"users",
+								"validate",
+								"Yd1dneZJLKJZqBU4AsXbMBXps8S6rZ"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logear con usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"alberjghoyos@gmail.com\",\r\n    \"password\": \"Escoces3?\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar codigo recuperacion contraseña",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"alberjghoyos@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/users/recover-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"users",
+								"recover-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar contraseña con codigo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"alberjghoyos@gmail.com\",\r\n    \"recoverPassCode\": \"dGKq0rU1GO\",\r\n    \"newPassword\": \"Contrasena3*\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/users/password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"users",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar perfil usuario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIxMjM5NzcwLCJleHAiOjE3MjE4NDQ1NzB9.uE_LEPGQn9CYlFOD8LPh1XE37iPFHpgQwYdoQJLVJcs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Paco33\",\r\n    \"firstname\": \"Paco\",\r\n    \"lastname\": \"Martin\",\r\n    \"email\": \"paco@paco.com\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Añadir avatar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyOTY0ODk1LCJleHAiOjE3MjM1Njk2OTV9.73cmf8MMrD9irx9OcsqwUUI4b0chROsy_QcrK3FYn-o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/Alberto/OneDrive/Imágenes/cartelDj.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3020/users/avatar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"users",
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cambiar contraseña (logueado)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyOTY0ODk1LCJleHAiOjE3MjM1Njk2OTV9.73cmf8MMrD9irx9OcsqwUUI4b0chROsy_QcrK3FYn-o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\": \"Contrasena1?\",\r\n    \"confirmPassword\": \"Contrasena1?\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/users/change-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"users",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar perfil usuario",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIxMjM5NzcwLCJleHAiOjE3MjE4NDQ1NzB9.uE_LEPGQn9CYlFOD8LPh1XE37iPFHpgQwYdoQJLVJcs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3020/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Votar experiencia",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyOTY0ODk1LCJleHAiOjE3MjM1Njk2OTV9.73cmf8MMrD9irx9OcsqwUUI4b0chROsy_QcrK3FYn-o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"value\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/experiencias/2/votes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"experiencias",
+								"2",
+								"votes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Not Found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3020/paginaNoExistente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3020",
+					"path": [
+						"paginaNoExistente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recurso estático",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3020/uploads/098ff5cf-ee4c-4747-a369-f607967a14fa.jpg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3020",
+					"path": [
+						"uploads",
+						"098ff5cf-ee4c-4747-a369-f607967a14fa.jpg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
